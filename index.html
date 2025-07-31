@@ -79,6 +79,47 @@
       margin: 20px 0;
       transition: opacity 0.5s ease;
     }
+
+    /* Стили мини-календаря */
+    #miniCalendar {
+      max-width: 280px;
+      margin: 0 auto 40px;
+      background: #fff0f5;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(214,51,108,0.3);
+      padding: 15px;
+      color: #5c2b3c;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    #miniCalendar .month-year {
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    #miniCalendar .weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #d6336c;
+    }
+    #miniCalendar .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      gap: 8px;
+    }
+    #miniCalendar .days div {
+      padding: 6px 0;
+      border-radius: 50%;
+    }
+    #miniCalendar .days .highlight {
+      background-color: #ff8fa3;
+      color: white;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -86,6 +127,52 @@
 
   <div class="clock"></div>
   <h2 id="daysCounter">Загрузка...</h2>
+
+  <!-- Мини-календарь -->
+  <div id="miniCalendar">
+    <div class="month-year">Август 2024</div>
+    <div class="weekdays">
+      <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+    </div>
+    <div class="days">
+      <!-- Пустые ячейки для выравнивания -->
+      <div></div> <!-- Пн 29 июля -->
+      <div></div> <!-- Вт 30 июля -->
+      <div></div> <!-- Ср 31 июля -->
+      <!-- Числа августа -->
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div class="highlight">4</div> <!-- Выделенная дата -->
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+      <div>19</div>
+      <div>20</div>
+      <div>21</div>
+      <div>22</div>
+      <div>23</div>
+      <div>24</div>
+      <div>25</div>
+      <div>26</div>
+      <div>27</div>
+      <div>28</div>
+      <div>29</div>
+      <div>30</div>
+      <div>31</div>
+    </div>
+  </div>
 
   <div class="phrase" id="phrase">Нажми на кнопку, чтобы услышать что-то хорошее 😊</div>
   <button onclick="newPhrase()">Помурлыкать</button>
