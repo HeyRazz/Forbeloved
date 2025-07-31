@@ -162,17 +162,17 @@
     }
 
     function updateDaysCounter() {
-        const startDate = new Date("2024-08-04");
-        const today = new Date();
-        const diffTime = today - startDate;
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-        document.getElementById("daysCounter").innerText = Мы вместе уже ${diffDays} ${pluralizeDays(diffDays)}!;
+      const startDate = new Date("2024-08-04");
+      const today = new Date();
+      const diffTime = today - startDate;
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById("daysCounter").innerText = Мы вместе уже ${diffDays} ${pluralizeDays(diffDays)}!;
     }
 
     function pluralizeDays(n) {
-        if (n % 10 === 1 && n % 100 !== 11) return "день";
-        if ([2,3,4].includes(n % 10) && ![12,13,14].includes(n % 100)) return "дня";
-        return "дней";
+      if (n % 10 === 1 && n % 100 !== 11) return "день";
+      if ([2, 3, 4].includes(n % 10) && ![12, 13, 14].includes(n % 100)) return "дня";
+      return "дней";
     }
 
     updateDaysCounter();
